@@ -10,8 +10,10 @@ This is a plugin for [isort](https://github.com/PyCQA/isort) that enforces impor
     ```bash
     pip install git+https://github.com/Lukasz87/intero_isort
     ```
+   
+2. **Add the Configuration from Configuration section**
 
-2. **Run file checking:**
+3. **Run file checking:**
     ```bash
     isort <path-to-file>/file_to_check.py
     ```
@@ -28,12 +30,8 @@ This is a plugin for [isort](https://github.com/PyCQA/isort) that enforces impor
     ```
    Repo (`repo`) URL and revision (`rev`) should be updated with the URL and version where you will be hosting the package, or you can use the provided ones.
 
-## Optionally Configuration
-Adding the `.isort.cfg` is not necessary because in package installation 
-is added default config as you can see in `pyproject.toml` in section: `[tool.isort]`.
-
-You can customize the behavior of the Intero isort by adding the `.isort.cfg` 
-file in project. And it will be overwriting default configuration in .toml file:
+## Configuration
+Add `.isort.cfg` in the main folder of your repository with values:
 
 
 ```cfg
@@ -47,8 +45,12 @@ sort_order=intero
 line_length=79
 ```
 
+## Optionally - Package modyfication
+
 You can also put configuration directly to package in file `pyproject.toml` in the section
- [tool.isort] ( but you need to reinstall the package after it):
+ [tool.isort] ( but you need to reinstall the package after it). 
+Unfortunetty in m envertaiment i have problem that ODOOADDONS don't sort, so best way is use `.isort.cfg`.
+:
 
 
 ```toml
