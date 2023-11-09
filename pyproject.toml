@@ -7,8 +7,8 @@ license = "LGPL-3"
 
 [tool.isort]
 profile = "black"
-known_odooaddons = "odoo.addons"
 known_odoo = "odoo"
+known_odooaddons = "odoo.addons"
 default_section = "THIRDPARTY"
 sections = ["THIRDPARTY", "ODOO", "ODOOADDONS"]
 multi_line_output = 3
