@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "intero_isort"
+version = "1.0"
+description = "An Intero plugin that modifies isorts sorting order to provide a sorting standard in the company."
+authors = ["Intero Technologies GmbH"]
+license = "LGPL-3"
+
+[tool.isort]
+profile = "black"
+known_odooaddons = "odoo.addons"
+known_odoo = "odoo"
+default_section = "THIRDPARTY"
+sections = ["THIRDPARTY", "ODOO", "ODOOADDONS"]
+multi_line_output = 3
+sort_order = "intero"
+line_length = 79
+
+[tool.poetry.plugins."isort.sort_function"]
+intero = "intero_isort.intero_plugin:intero"
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+natsort = ">=7.1.1"
+isort = ">=5.11"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
