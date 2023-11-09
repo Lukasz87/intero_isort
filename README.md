@@ -40,9 +40,9 @@ Add `.isort.cfg` in the main folder of your repository with values:
 ```cfg
 [settings]
 known_odoo=odoo
-known_odooaddons = odoo.addons
+known_ODOOADDONS = odoo.addons
 default_section=THIRDPARTY
-sections=THIRDPARTY,ODOO,ODOO_ADDONS
+sections=THIRDPARTY,ODOO,ODOOADDONS
 multi_line_output=3
 sort_order=intero
 line_length=79
