@@ -16,7 +16,7 @@ sort_order = "intero"
 line_length = 79
 
 [tool.poetry.plugins."isort.sort_function"]
-intero = "intero_isort.intero_plugin:intero"
+intero = "intero_isort_plugin.intero_plugin:intero"
 
 [tool.poetry.dependencies]
 python = ">=3.7"
