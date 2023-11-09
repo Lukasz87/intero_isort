@@ -28,7 +28,10 @@ This is a plugin for [isort](https://github.com/PyCQA/isort) that enforces impor
         - id: isort
           args: ["--profile", "black", "--filter-files"]
     ```
+
    Repo (`repo`) URL and revision (`rev`) should be updated with the URL and version where you will be hosting the package, or you can use the provided ones.
+
+2. **Add the Configuration from Configuration section**
 
 ## Configuration
 Add `.isort.cfg` in the main folder of your repository with values:
